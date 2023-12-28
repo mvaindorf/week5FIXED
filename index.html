@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberspace</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap"> <!-- Pixelated font link -->
+
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: 'VT323', monospace; /* Pixelated font */
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .cmd-container {
+            background-color: #000;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #00ff00;
+            overflow: auto;
+        }
+
+        .cmd-text {
+            font-size: 18px;
+            line-height: 1.4;
+            white-space: pre-line;
+        }
+
+        .download-animation {
+            display: inline-block;
+            animation: spin 0.5s infinite linear;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .progress-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .progress-label {
+            width: 120px;
+            text-align: right;
+            margin-right: 10px;
+            color: #00ff00;
+        }
+
+        .progress-bar-container {
+            width: 200px;
+            height: 10px;
+            background-color: #000;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0; /* Set the width based on the progress percentage */
+            background-color: #00ff00;
+            animation: fill-animation 4s forwards; /* Smooth fill animation */
+        }
+
+        @keyframes fill-animation {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .welcome-text {
+            font-size: 18px;
+            line-height: 1.4;
+            white-space: pre-line;
+            color: #ff0000;
+            animation: blink 1s infinite; /* Blinking animation */
+            display: none; /* Initially hidden */
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+        @keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+.blink {
+    animation: blink 1s infinite;
+}
+
+    </style>
+</head>
+<body>
+    <div class="cmd-container">
+        <span class="cmd-text">
+        <span class="network-text">DATA RUNNER NETWORK
+        </span> Downloading:</span>
+        <span class="cmd-text download-animation"> /</span>
+        <div class="progress-bar">
+            <div class="progress-label">UI:</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="animation-duration: 5s;"></div>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-label">Dataset:</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="animation-duration: 3s;"></div>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-label">Access keys:</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="animation-duration: 6s;"></div>
+            </div>
+        </div>
+        <!-- Additional 50 server-related entries with progress animations -->
+        <div class="progress-bar">
+            <div class="progress-label">Server 1:</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="animation-duration: 4s;"></div>
+            </div>
+        </div>
+        <!-- ... repeat this block for the next 49 entries ... -->
+        <div class="progress-bar">
+            <div class="progress-label">Server 50:</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="animation-duration: 8s;" id="last-progress"></div>
+            </div>
+        </div>
+        </pre>
+        <span class="cmd-text access-granted-text blink" id="access-granted-text">Access granted</span>
+        
+    </div>
+
+
+</body>
+</html>
